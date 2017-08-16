@@ -7,7 +7,7 @@ import MySQLdb
 def getinfo():
     sql='select Title from edubug'
     try:
-        con=MySQLdb.connect(host='112.74.204.232',user='root',passwd='123pyj',db='edubug',charset='utf8')
+        con=MySQLdb.connect(host='',user='root',passwd='',db='edubug',charset='utf8')
         cursor=con.cursor()
         cursor.execute(sql)
         ls=cursor.fetchall()
