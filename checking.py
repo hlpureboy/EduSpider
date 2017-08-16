@@ -7,10 +7,10 @@ import time
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
-email_address='1252144028@qq.com'
-email_key='jpleikdouyfpibig'
+email_address=''
+email_key=''
 stmp_server="smtp.qq.com"
-toaddr=["1252144028@qq.com"]
+toaddr=[""]
 url='https://src.edu-info.edu.cn/gift/4'
 def getnumber():
     text=requests.get(url)
@@ -22,7 +22,7 @@ def sendemail(number):
     number=str(number)
     content='教育行业src 京东卡剩余数量:'+number+'  <a href=\'https://src.edu-info.edu.cn/gift/4\'>点击兑换！</a>'
     msg=MIMEText(content,'html','utf-8')
-    msg['From']='京东卡检测机器人<1252144028@qq.com>'
+    msg['From']='京东卡检测机器人<>'
     msg['subject']='教育行业src京东卡机器人报喜了！'
     server=smtplib.SMTP_SSL(stmp_server,465)
     server.login(email_address,email_key)
